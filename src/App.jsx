@@ -1,29 +1,28 @@
-
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css'
-import About from './componenets/About';
-import Header from './componenets/Header'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './componenets/Header';
 import Home from './componenets/Home';
-import Contact from './componenets/Contact';
+import About from './componenets/About';
 import Projects from './componenets/Projects';
-
+import Contact from './componenets/Contact';
 
 function App() {
   
 
   return (
     <>
-    <Router>
-    <Header />
-      <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/projects" element={<Projects/>} />
-    <Route path="/contact" element={<Contact/>} />
-      <Route path="/about" element={<About/>} />
+       <Router>
+       <Header/>
+       <Routes>
+       <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={< Contact/>} />
+       </Routes>
 
-      </Routes>
-      </Router>
-
+       </Router>
+      
     </>
   )
 }
